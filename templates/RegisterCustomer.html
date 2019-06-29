@@ -1,0 +1,68 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% block content%}
+
+<title> RegisterCustomer </title>
+<body>
+
+<body style="background-color:#A52A2A">
+
+<div class="cointainer">
+
+    <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title"> Register customer</strong>
+                        </div>
+                        <div class="card-body">
+                  <table id="bootstrap-data-table" class="table table-striped table-bordered">
+      <tr>
+           <th>First name</th>
+       <th>Last name</th>
+        <th>Email</th>
+        <th>Contact</th>
+          <th>Residence</th>
+          <th>Occupation</th>
+          <th>Next of kin</th>
+          <th>Relationship</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+<tr>
+
+   <h1> Register Customer </h1>
+    {% for customer in customers %}
+    <h1>{{customer.customer}}</h1>
+    <td>  {{customer.first_name}}</td>
+    <td>{{customer.last_name}}</td>
+    <td> {{customer.email}}</td>
+    <td> {{customer.contact}}</td>
+    <td> {{customer.residence}}</td>
+    <td> {{customer.occupation}}</td>
+    <td> {{customer.next_of_kin}}</td>
+    <td> {{customer.relationship}}</td>
+</tr>
+ {% endfor %}
+
+  </table>
+
+
+
+       </div>
+                    </div>
+                </div>
+</div>
+                </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+    {% endblock%}
+

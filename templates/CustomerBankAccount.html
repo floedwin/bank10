@@ -1,0 +1,63 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% block content%}
+
+<title> CustomerBankAccount</title>
+<body style="background-color:#A52A2A">
+<h1> Customer Bank Account Information</h1>
+<div class="cointainer">
+    <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title"> Customer Bank Account Information</strong>
+                        </div>
+                        <div class="card-body">
+                  <table id="bootstrap-data-table" class="table table-striped table-bordered">
+      <tr>
+           <th>Full name</th>
+        <th>Email</th>
+        <th>Contact</th>
+          <th>Residence</th>
+          <th>Work history</th>
+          <th>Next of kin</th>
+          <th>Relationship</th>
+          <th>Account number</th>
+    </tr>
+    </tr>
+    </tr>
+
+    </tr>
+    </thead>
+    <tbody>
+<tr>
+     {% for account in accounts %}
+    <h1>{{account.account}}</h1>
+    <td>  {{account.full_name}}</td>
+    <td> {{account.email}}</td>
+    <td> {{account.contact}}</td>
+    <td> {{account.residence}}</td>
+    <td> {{account.work_history}}</td>
+    <td> {{account.next_of_kin}}</td>
+    <td> {{account.relationship}}</td>
+     <td> {{account.account_number}}</td>
+    {% endfor %}
+
+  </table>
+
+
+
+       </div>
+                    </div>
+                </div>
+</div>
+                </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+    {% endblock%}

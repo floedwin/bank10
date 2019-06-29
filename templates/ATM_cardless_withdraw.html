@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block body%}ATM Cardless Withdraw{% endblock %}
+    </title>
+<body >
+<div class="cointainer">
+
+
+
+
+
+
+    <h1> ATM Cardless Withdraw Service with MTN Mobile Money </h1>
+    <p> This service helps you withdraw money from your MTN Mobile Money wallet using our ATMs without an ATM card.</p>
+
+    </div>
+<div>
+    <h1>How to make the transaction</h1>
+    <h2>1.  On the Phone ;</h2>
+     <p> . Press *165# on your phone and press Yes </p>
+     <p> . Select Financial services</p>
+     <p> . Select ATM Cashout</p>
+     <p> . Select ATM Withdraw under the Menu</p>
+     <p> . Type in “1” to Generate the “TIN Code” It is a 4 digit number</p>
+     <p> . Enter your Mobile Money  PIN</p>
+     <p> . You will then receive a message with your TIN Code. </p>
+
+<h3>Note: The TIN Code is only valid for 10 Minutes.</h3>
+     <h2>2. At the  Riches  Bank  ATM</h2>
+    <p>  . Press any key, then select MTN Mobile Money</p>
+     <p> . Enter your phone Number</p>
+     <p> . Enter the amount you wish to withdraw</p>
+     <p> . Enter the TIN code</p>
+     <p> . Press OK</p>
+     <p> . The machine will then dispense the cash and a receipt.</p>
+</div>
+
+
+</body>
+
+{% endblock %}

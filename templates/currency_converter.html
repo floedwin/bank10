@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% block content%}
+<title>Currency Convertor </title>
+<body style="background-color:#A52A2A">
+<div class="cointainer">
+
+    <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title"> Currency convetor</strong>
+                        </div>
+                        <div class="card-body">
+                  <table id="bootstrap-data-table" class="table table-striped table-bordered">
+      <tr>
+           <th>Amount</th>
+        <th>Currency</th>
+        <th>Amount(UGx)</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+<tr>
+     {% for currency in currencies %}
+    <h1>{{currency.currency}}</h1>
+    <p> {{currency.amount}}</p>
+    <p> {{currency.currency}}</p>
+    <p> {{currency.amount}}</p>
+    </tr>
+ {% endfor %}
+
+  </table>
+
+
+
+       </div>
+                    </div>
+                </div>
+</div>
+                </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+    {% endblock%}
+

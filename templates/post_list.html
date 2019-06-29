@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{% load staticfiles%}
+{% block content %}
+<title>
+{% block title %}Log in to Riches Bank{% endblock %}
+    </title>
+  {% block breadcrumb %}
+  <li class="breadcrumb-item active"> Posts page!!! </li>
+{% endblock %}
+<body>
+   <p align="right">
+   <button type="button" class="btn btn-secondary btn-lg" active><a class="nav-brand" href= "{% url 'post_new' %}"> Register Post</a></button>
+</p>
+<div>
+    <h1><a href="{% url 'home' %}">Home</a></h1>
+</div>
+{% for post in posts %}
+<div>
+   <p> Title: <h1><a href="">{{ post.title }}</a></h1></p>
+<p>published: {{ post.published_date }}</p>
+    <p> Body :{{ post.body|linebreaksbr }}</p>
+</div>
+{% endfor %}
+</body>
+</html>
+{% endblock %}

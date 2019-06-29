@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block body%} Login{% endblock %}
+    </title>
+<body >
+<div class="cointainer">
+
+        <h1> Business loans and leases </h1>
+<p>
+    <ul>
+    <li><a href="{%url 'agricultural_loans'%}">Agicultural loans</a></li>
+    <li><a href="{%url 'bank_over_draft'%}">Bank over draft</a></li>
+    <li><a href="{%url 'trade_finance'%}">Trade finance</a></li>
+    <li><a href="{%url 'micro_business_loans'%}">Micro business loans</a></li>
+
+  </ul>
+
+</p>
+
+
+    </div>
+
+
+</body>
+
+{% endblock %}

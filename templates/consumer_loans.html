@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+{% block content %}
+<title>
+{% block body%} Consumer loans{% endblock %}
+    </title>
+<body >
+<div class="cointainer">
+
+        <h1> Consumer Loans </h1>
+<p>
+    <ul>
+    <li><a href="{%url 'solar_loans'%}">Solar loans</a></li>
+    <li><a href="{%url 'home_improvement_loans'%}">Home improvement loans</a></li>
+
+
+  </ul>
+
+</p>
+
+
+    </div>
+
+
+</body>
+
+{% endblock %}
